@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24BB1835-004C-4EBB-AC98-425A4F7807D3}</ProjectGuid>
+    <ProjectGuid>{BBB4BDA7-2B6D-4841-B744-11074E6B11C8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UnitTestProject1</RootNamespace>
@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="EntryPointUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="JsonDeserializerUnitTests.cs" />
+    <Compile Include="JsonAlbumOrganizerUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

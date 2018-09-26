@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Photo.cs" />
-    <Compile Include="JsonDeserializer.cs" />
+    <Compile Include="JsonAlbumOrganizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

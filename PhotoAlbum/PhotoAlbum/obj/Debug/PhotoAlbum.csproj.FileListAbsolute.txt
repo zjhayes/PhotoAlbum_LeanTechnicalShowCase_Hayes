@@ -8,3 +8,13 @@ C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum\Phot
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.csproj.CopyComplete
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.exe
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.pdb
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\bin\Debug\PhotoAlbum.exe.config
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\bin\Debug\PhotoAlbum.exe
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\bin\Debug\PhotoAlbum.pdb
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.csprojAssemblyReference.cache
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.csproj.CoreCompileInputs.cache
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.csproj.CopyComplete
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.exe
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum\obj\Debug\PhotoAlbum.pdb
