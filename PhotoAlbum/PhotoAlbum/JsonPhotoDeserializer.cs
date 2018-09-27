@@ -1,21 +1,21 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PhotoAlbum
 {
     public class JsonPhotoDeserializer
     {
-        private string jsonURL;
+        public string JsonURL { get; set; }
 
+        public JsonPhotoDeserializer()
+        {
+
+        }
         public JsonPhotoDeserializer(string jsonURL)
         {
-            this.jsonURL = jsonURL;
+            JsonURL = jsonURL;
         }
 
         public List<Photo> deserializeJson()
@@ -28,13 +28,25 @@ namespace PhotoAlbum
             }
             catch(ArgumentNullException nullex) // When no jsonURL is provided.
             {
-                throw new ArgumentNullException("jsonURL cannot be null. ", nullex);
+                throw new ArgumentNullException("Deserializer did not receive valid JSON URL. ", nullex);
+            }
+            catch(Exception)
+            {
+                throw;
             }
         }
 
         private string jsonURLToString()
         {
-            return new WebClient().DownloadString(jsonURL);   // Convert JSON to string.
+            try
+            {
+                return new WebClient().DownloadString(JsonURL);   // Convert JSON to string.
+            }
+            catch(WebException webex)
+            {
+                throw new WebException("Must be connected to internet to retrieve JSON data. " + webex);
+            }
+
         }
     }
 }
