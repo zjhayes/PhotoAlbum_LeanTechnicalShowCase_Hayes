@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PhotoAlbum;
+using System.Collections.Generic;
 
 namespace PhotoAlbumUnitTests
 {
@@ -10,7 +11,7 @@ namespace PhotoAlbumUnitTests
         [TestMethod]
         public void JsonDeserializer_ThrowsNullArgumentException()
         {
-            JsonAlbumOrganizer testAlbumOrganizer = new JsonAlbumOrganizer(null);
+            JsonPhotoDeserializer testAlbumOrganizer = new JsonPhotoDeserializer(null);
             try
             {
                 testAlbumOrganizer.deserializeJson();
@@ -25,13 +26,13 @@ namespace PhotoAlbumUnitTests
         [TestMethod]
         public void JsonDeserializer_JsonStringDeserialized_IsEqual()
         {
-            JsonAlbumOrganizer testAlbumOrganizer = new JsonAlbumOrganizer("https://jsonplaceholder.typicode.com/photos");
-            testAlbumOrganizer.deserializeJson();
+            JsonPhotoDeserializer testDeserializer = new JsonPhotoDeserializer("https://jsonplaceholder.typicode.com/photos");
+            List<Photo> deserializedPhotoCollection = testDeserializer.deserializeJson();
 
             string expected = "[albumId = 1, id = 1, title = accusamus beatae ad facilis cum similique qui sunt, " +
                 "url = https://via.placeholder.com/600/92c952, thumbnailUrl = https://via.placeholder.com/150/92c952]";
 
-            var actual = testAlbumOrganizer.DeserializedPhotoCollection[0].toString();
+            var actual = deserializedPhotoCollection[0].toString();
 
             Assert.AreEqual(expected, actual);
         }

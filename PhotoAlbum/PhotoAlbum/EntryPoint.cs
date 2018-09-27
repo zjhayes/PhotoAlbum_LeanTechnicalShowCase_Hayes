@@ -12,8 +12,10 @@ namespace PhotoAlbum
         {
             try
             {
-                JsonAlbumOrganizer jsonAlbum = new JsonAlbumOrganizer("https://jsonplaceholder.typicode.com/photos");
-                jsonAlbum.deserializeJson();
+                JsonPhotoDeserializer jsonAlbum = new JsonPhotoDeserializer("https://jsonplaceholder.typicode.com/photos");
+                PhotoOrganizer organizer = new PhotoOrganizer();
+                organizer.PhotoCollection = jsonAlbum.deserializeJson();
+                organizer.printCollectionToConsole();
             }
             catch(Exception ex)
             {

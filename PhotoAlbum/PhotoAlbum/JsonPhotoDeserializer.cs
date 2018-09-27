@@ -9,23 +9,22 @@ using System.Threading.Tasks;
 
 namespace PhotoAlbum
 {
-    public class JsonAlbumOrganizer
+    public class JsonPhotoDeserializer
     {
         private string jsonURL;
-        public List<Photo> DeserializedPhotoCollection { get; set; }
 
-        public JsonAlbumOrganizer(string jsonURL)
+        public JsonPhotoDeserializer(string jsonURL)
         {
             this.jsonURL = jsonURL;
         }
 
-        public void deserializeJson()
+        public List<Photo> deserializeJson()
         {
             try
             {
                 string strJson = jsonURLToString();
                 // Create list of deserialized JSON photo objects.
-                DeserializedPhotoCollection = JsonConvert.DeserializeObject<List<Photo>>(strJson);
+                return JsonConvert.DeserializeObject<List<Photo>>(strJson);
             }
             catch(ArgumentNullException nullex) // When no jsonURL is provided.
             {
@@ -36,11 +35,6 @@ namespace PhotoAlbum
         private string jsonURLToString()
         {
             return new WebClient().DownloadString(jsonURL);   // Convert JSON to string.
-        }
-
-        public void printCollectionToConsole()
-        {
-
         }
     }
 }
