@@ -1,53 +1,22 @@
 # PhotoAlbum_LeanTechnicalShowCase_Hayes
 
+author: Zachary Hayes
+Lean Technical Showcase, PhotoAlbum
 
-# Instructions
+## Getting Started
 
-LT Technical Showase - Photo Album
+This is a **.Net** project I wrote using **Visual Studio 2017 Enterprise**. To run the program, open in Visual Studio and run the **EntryPoint.cs** class which contains the main method. Console will appear prompting user for an Album ID number. Enter a number, or enter "ALL" to write all photos to the console, or enter "EXIT" to end the program. The program will loop until user exits.
 
-Create a console application that displays photo ids and titles in an album. The photos are available in this online web service (https://jsonplaceholder.typicode.com/photos).
+VS solution should contain a project of unit tests which can be ran using CTRL+R then A.
 
- 
+## Classes
 
-Hint: Photos are filtered with a query string. This will return photos within albumId=3 (https://jsonplaceholder.typicode.com/photos?albumId=3)
+EntryPoint.cs contains the main method, which handles the user input.
 
- 
+JsonPhotoDeserializer.cs parses JSON into Photo objects using the JSON URL provided for this project and the album ID provided by the user. The deserializeJson method returns a list of Photo objects.
 
-You can use any language
+Photo.cs is a blueprint for the deserialized JSON photo objects.
 
-Any open source libraries
-
-Unit tests are encouraged
-
-Post your solution on any of the free code repositories and send us a link:
-
-https://github.com/
-
-https://gitlab.com
-
-https://bitbucket.org/
-
-Provide a README that contains instructions on how to build and run your application
-
- 
-
-Spend as much (or little) time as you'd like on this. Feel free to use any resources available.
-
- 
-
-Example: 
-
-> photo-album 2
-
-[53] soluta et harum aliquid officiis ab omnis consequatur
-
-[54] ut ex quibusdam dolore mollitia
-
-…
+PhotoOrganizer.cs handles a list of Photo objects. The printCollectionToConsole method is used to write a photo album to the console in the format suggested in the instructions for this project.
 
 
-> photo-album 3
-
-[101] incidunt alias vel enim
-
-[102] eaque iste corporis tempora vero distinctio consequuntur nisi nesciunt
