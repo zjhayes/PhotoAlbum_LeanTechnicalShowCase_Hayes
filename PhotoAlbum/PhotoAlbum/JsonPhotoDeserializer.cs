@@ -18,6 +18,10 @@ namespace PhotoAlbum
             JsonURL = jsonURL;
         }
 
+        /// <summary>
+        /// Parses JsonURL into Photo objects.
+        /// </summary>
+        /// <returns>List of deserialized JSON Photo objects.</returns>
         public List<Photo> deserializeJson()
         {
             try
@@ -36,13 +40,17 @@ namespace PhotoAlbum
             }
         }
 
+        /// <summary>
+        /// Takes JSON from web using JsonURL and converts to string.
+        /// </summary>
+        /// <returns>String of JSON data.</returns>
         private string jsonURLToString()
         {
             try
             {
                 return new WebClient().DownloadString(JsonURL);   // Convert JSON to string.
             }
-            catch(WebException webex)
+            catch(WebException webex)   // When no internet connection..
             {
                 throw new WebException("Must be connected to internet to retrieve JSON data. " + webex);
             }
