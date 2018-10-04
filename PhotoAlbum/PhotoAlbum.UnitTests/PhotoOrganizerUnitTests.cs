@@ -9,17 +9,19 @@ namespace PhotoAlbumUnitTests
     [TestClass]
     public class PhotoOrganizerUnitTests
     {
+        StringWriter stringWriter = new StringWriter();
+
         [TestMethod]
-        public void PrintCollectionToConsole_ThrowsNullArgumentException()
+        public void PrintCollectionToConsole_ThrowsArgumentNullException()
         {
             PhotoOrganizer testOrganizer = new PhotoOrganizer();
             // Not setting PhotoCollection property, making it null.
             try
             {
-                testOrganizer.printCollectionToConsole();
+                testOrganizer.PrintCollectionToConsole();
                 Assert.Fail();  // Exception not thrown if reached.
             }
-            catch (NullReferenceException)
+            catch (ArgumentNullException)
             {
                 Assert.IsTrue(true);    // Passes if null reference exception is thrown.
             }
@@ -38,14 +40,14 @@ namespace PhotoAlbumUnitTests
             testOrganizer.PhotoCollection = new List<Photo>();
             testOrganizer.PhotoCollection.Add(testPhoto);
 
-            using (StringWriter sw = new StringWriter())
+            using (stringWriter)
             {
-                Console.SetOut(sw);
-                testOrganizer.printCollectionToConsole();
+                Console.SetOut(stringWriter);
+                testOrganizer.PrintCollectionToConsole();
                 string expected = 
                     string.Format("[1] accusamus beatae ad facilis cum similique qui sunt{0}", 
                     Environment.NewLine);
-                string actual = sw.ToString();
+                string actual = stringWriter.ToString();
                 // Passes if test collection is printed to console.
                 Assert.AreEqual(expected, actual);
             }
@@ -58,14 +60,14 @@ namespace PhotoAlbumUnitTests
             PhotoOrganizer testOrganizer = new PhotoOrganizer();
             testOrganizer.PhotoCollection = new List<Photo>();
             // List is left empty.
-            using (StringWriter sw = new StringWriter())
+            using (stringWriter)
             {
-                Console.SetOut(sw);
-                testOrganizer.printCollectionToConsole();
+                Console.SetOut(stringWriter);
+                testOrganizer.PrintCollectionToConsole();
                 string expected =
                     string.Format("Album ID does not exist.{0}",
                     Environment.NewLine);
-                string actual = sw.ToString();
+                string actual = stringWriter.ToString();
                 // Passes if test collection is printed to console.
                 Assert.AreEqual(expected, actual);
             }

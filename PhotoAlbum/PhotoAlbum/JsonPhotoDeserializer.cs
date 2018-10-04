@@ -9,42 +9,20 @@ namespace PhotoAlbum
     {
         public string JsonURL { get; set; }
 
-        public JsonPhotoDeserializer()
-        {
-
-        }
-        public JsonPhotoDeserializer(string jsonURL)
-        {
-            JsonURL = jsonURL;
-        }
-
-        /// <summary>
-        /// Parses JsonURL into Photo objects.
-        /// </summary>
-        /// <returns>List of deserialized JSON Photo objects.</returns>
-        public List<Photo> deserializeJson()
+        public List<Photo> DeserializeJson()
         {
             try
             {
-                string strJson = jsonURLToString();
-                // Create list of deserialized JSON photo objects.
+                string strJson = JsonURLToString();
                 return JsonConvert.DeserializeObject<List<Photo>>(strJson);
             }
             catch(ArgumentNullException nullex) // When no jsonURL is provided.
             {
                 throw new ArgumentNullException("Deserializer did not receive valid JSON URL. ", nullex);
             }
-            catch(Exception)
-            {
-                throw;
-            }
         }
 
-        /// <summary>
-        /// Takes JSON from web using JsonURL and converts to string.
-        /// </summary>
-        /// <returns>String of JSON data.</returns>
-        private string jsonURLToString()
+        private string JsonURLToString()
         {
             try
             {

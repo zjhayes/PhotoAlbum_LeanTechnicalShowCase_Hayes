@@ -9,12 +9,6 @@ namespace PhotoAlbum
         private static string instructions = "Enter the ID number of the album you want to view. " +
             "Enter 'ALL' to view all albums, or 'EXIT' to end the program.";
 
-        /// <summary>
-        /// Deserializes JSON URL, user can enter Album ID to print that photo album.
-        /// Or user can enter "ALL" to print all photos to console.
-        /// Or user can enter "EXIT" to end program.
-        /// </summary>
-        /// <param name="args">Command line arguements.</param>
         static void Main(string[] args)
         {
             Console.WriteLine(instructions);
@@ -27,13 +21,12 @@ namespace PhotoAlbum
                 {
                     Console.Write("> photo-album ");
                     string input = Console.ReadLine();  // Take user input.
-                    validateInput(input);
+                    ValidateInput(input);
                     PhotoOrganizer organizer = new PhotoOrganizer
                     {
-                        // Deserialize JSON to PhotoCollection of Photo objects.
-                        PhotoCollection = deserializer.deserializeJson()
+                        PhotoCollection = deserializer.DeserializeJson()
                     };
-                    organizer.printCollectionToConsole();   // Print the user designated photo album.
+                    organizer.PrintCollectionToConsole();
                 }
                 catch (Exception ex)
                 {
@@ -44,14 +37,7 @@ namespace PhotoAlbum
             }
         }
 
-        /// <summary>
-        /// Validates that user input is an int, implying it is an albumId.
-        /// Otherwise, if user enters "ALL" deserializes entire JsonURL.
-        /// Otherwise, if user enters "EXIT" ends the program.
-        /// Any other input is invalid, writes error message to console.
-        /// </summary>
-        /// <param name="input">User input read from console.</param>
-        private static void validateInput(string input)
+        private static void ValidateInput(string input)
         {
             // Check if input is valid integer and set albumId accordingly.
             if (int.TryParse(input, out int albumId))

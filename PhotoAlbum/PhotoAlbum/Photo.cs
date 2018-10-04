@@ -9,7 +9,8 @@ namespace PhotoAlbum
         public string url { get; set; }
         public string thumbnailUrl { get; set; }
 
-        public string toString()
+        
+        public override string ToString()
         {
             return "[albumId = " + albumId +
                 ", id = " + id +
