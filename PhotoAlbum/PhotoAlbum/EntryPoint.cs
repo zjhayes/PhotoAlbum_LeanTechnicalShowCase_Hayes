@@ -2,58 +2,76 @@
 
 namespace PhotoAlbum
 {
-    class EntryPoint
+    public class EntryPoint
     {
-        private static JsonPhotoDeserializer deserializer;
-        private static string jsonURL;
-        private static string instructions = "Enter the ID number of the album you want to view. " +
+        private JsonPhotoDeserializer deserializer;
+        PhotoOrganizer organizer;
+        private string jsonURL = "https://jsonplaceholder.typicode.com/photos";
+        private string instructions = "Enter the ID number of the album you want to view. " +
             "Enter 'ALL' to view all albums, or 'EXIT' to end the program.";
+        private string albumHeader = "> photo-album ";
+        private bool exitProgram = false;
 
-        static void Main(string[] args)
+        public void RunByConsole(IUserInput input)
         {
             Console.WriteLine(instructions);
 
-            while (true)    // Run until user enters "EXIT"
+            while (!exitProgram)    // Run until user enters "EXIT"
             {
-                jsonURL = "https://jsonplaceholder.typicode.com/photos";
-                deserializer = new JsonPhotoDeserializer();
-                try
-                {
-                    Console.Write("> photo-album ");
-                    string input = Console.ReadLine();  // Take user input.
-                    ValidateInput(input);
-                    PhotoOrganizer organizer = new PhotoOrganizer
-                    {
-                        PhotoCollection = deserializer.DeserializeJson()
-                    };
-                    organizer.PrintCollectionToConsole();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                    Console.WriteLine(); // Empty line for spacing.
-                    Console.WriteLine(instructions);
-                }
+                Console.Write(albumHeader);
+                string args = input.GetInput();
+                RunProgram(args);
+            }
+            Environment.Exit(0);
+        }
+
+        public void RunByCommandLine(string args)
+        {
+            Console.WriteLine(albumHeader + args.ToString());   // ex. "> photo-album 1"
+            RunProgram(args);
+        }
+
+        private void RunProgram(string input)
+        {
+            try
+            {
+                SetDeserializer(input);
+                SetPhotoCollection();
+                organizer.PrintCollectionToConsole();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                Console.WriteLine();
+                Console.WriteLine(instructions);
             }
         }
 
-        private static void ValidateInput(string input)
+        private void SetPhotoCollection()
         {
-            // Check if input is valid integer and set albumId accordingly.
+            organizer = new PhotoOrganizer
+            {
+                PhotoCollection = deserializer.DeserializeJson()
+            };
+        }
+
+        private void SetDeserializer(string input)
+        {
+            deserializer = new JsonPhotoDeserializer();
             if (int.TryParse(input, out int albumId))
             {
-                // Set deserializer JsonURL to user designated album.
                 deserializer.JsonURL = (jsonURL + "?albumId=" + albumId);
             }
             else if (input.ToUpper() == "ALL")
             {
-                deserializer.JsonURL = jsonURL;      // All photos will be printed to console.
+                // All photos will be printed to console.
+                deserializer.JsonURL = jsonURL;
             }
             else if (input.ToUpper() == "EXIT")
             {
-                Environment.Exit(0);                // End program.
+                exitProgram = true;
             }
-            else   // if input not accepted..
+            else
             {
                 Console.WriteLine("INVALID INPUT");
             }

@@ -23,7 +23,7 @@ namespace PhotoAlbumUnitTests
             }
             catch (ArgumentNullException)
             {
-                Assert.IsTrue(true);    // Passes if null reference exception is thrown.
+                Assert.IsTrue(true);
             }
         }
 
