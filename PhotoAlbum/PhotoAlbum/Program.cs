@@ -1,14 +1,12 @@
-﻿using System;
-
+﻿
 namespace PhotoAlbum
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            EntryPoint program= new EntryPoint();
-
-            if(args.Length == 0)
+            EntryPoint program = new EntryPoint();
+            if (args.Length == 0)
             {
                 program.RunByConsole(new UserInput());
             }
@@ -16,14 +14,6 @@ namespace PhotoAlbum
             {
                 program.RunByCommandLine(args[0]);
             }
-        }
-    }
-
-    class UserInput : IUserInput
-    {
-        public string GetInput()
-        {
-            return Console.ReadLine().Trim();
         }
     }
 }

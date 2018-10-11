@@ -46,13 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntryPoint.cs" />
-    <Compile Include="IUserInput.cs" />
+    <Compile Include="Objects\EntryPoint.cs" />
+    <Compile Include="Interfaces\IJsonDeserializer.cs" />
+    <Compile Include="Interfaces\IUserInput.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Photo.cs" />
-    <Compile Include="JsonPhotoDeserializer.cs" />
-    <Compile Include="PhotoOrganizer.cs" />
+    <Compile Include="Objects\Photo.cs" />
+    <Compile Include="Objects\JsonPhotoDeserializer.cs" />
+    <Compile Include="Objects\PhotoOrganizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Objects\UserInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

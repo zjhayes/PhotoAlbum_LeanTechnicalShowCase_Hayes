@@ -1,8 +1,6 @@
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\UnitTestProject1.dll
-C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\UnitTestProject1.pdb
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\PhotoAlbum.exe
@@ -15,5 +13,11 @@ C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_Lean
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\PhotoAlbumUnitTests.csprojAssemblyReference.cache
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\PhotoAlbumUnitTests.csproj.CoreCompileInputs.cache
 C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\PhotoAlbumUnitTests.csproj.CopyComplete
-C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\UnitTestProject1.dll
-C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\UnitTestProject1.pdb
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\nunit.framework.dll
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\nunit.framework.pdb
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\nunit.framework.xml
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\PhotoAlbumUnitTests.dll
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\bin\Debug\PhotoAlbumUnitTests.pdb
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\PhotoAlbumUnitTests.dll
+C:\Users\zacha\Google Drive\Programs\LeanTechnicalShowcase_Hayes\PhotoAlbum_LeanTechnicalShowCase_Hayes\PhotoAlbum\PhotoAlbum.UnitTests\obj\Debug\PhotoAlbumUnitTests.pdb
